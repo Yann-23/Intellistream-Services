@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color:white;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(42, 60, 79);
+}
+
+
+
+header h2{
+    color: white;
+}
+
+.nav-list{
+    margin: 20px;
+    
+}
+
+ul li{
+    display: inline;
+    margin: 10px;
+
+}
+li a:hover{
+    text-decoration: underline;
+    color: black;
+}
+
+li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+}
+
+h2 {
+  text-align: center;
+  margin: 0 ;
+  padding: 20px;
+}
+.content h3{
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 1,5rem;
+    
+}
+
+section{
+    background-color: rgb(230, 224, 224);
+    margin: 20px;
+    padding: 30px;
+    border-radius: 12px;
+    border: 10px solid rgb(14, 13, 13); 
+}

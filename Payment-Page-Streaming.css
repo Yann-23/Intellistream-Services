@@ -1,0 +1,63 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color:white;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(42, 60, 79);
+}
+
+
+
+header h2{
+    color: white;
+    margin: 20px;
+    
+}
+
+.nav-list{
+    margin: 20px;
+    
+}
+
+ul li{
+    display: inline;
+    margin-right: 5px;margin: 20px;
+    
+
+}
+li a:hover{
+    text-decoration: underline;
+    color: black;
+}
+
+li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.content h3{
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 1,5rem;
+    color: white;
+    
+}
+.content p,h2,h4{
+    color: white;
+}
+#payment-info{
+color: white;
+}
+
+section{
+    background-color: rgb(9, 9, 9);
+    margin: 20px;
+    padding: 30px;
+    border-radius: 12px;
+    border: 10px solid rgb(239, 12, 12); 
+}

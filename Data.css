@@ -1,0 +1,129 @@
+/*Resetting margin and padding for the body and setting a background color*/
+body{
+    margin: 0;
+    padding: 0;
+    background-color: brown;
+    }
+/* Styling header with flex display and background color*/
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(42, 60, 79);
+}
+/*Styling the header h2*/
+header h2{
+    color: white;
+    padding-left: 20px;
+}
+/* Styling for nav-List*/
+.nav-list{
+    margin: 5px;
+    
+}
+/* Styling the navigation list*/
+ul li{
+    display: inline;
+    margin-right: 20px;
+
+}
+/* Changing the color and the text decoration for list in the nav*/
+li a:hover{
+    text-decoration: underline;
+    color: black;
+}
+/*Styling the links*/
+li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+}
+/* Styling the section with relative position*/ 
+    section{
+        position: relative;
+        
+    }
+    /*Setting the size of images*/
+    img{
+        width: 200px;
+        height: 100px;
+    }
+
+/*Styling the container with grid display and setting the grid template columns*/
+    .container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(20rem,1fr));
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        margin:auto;
+    }
+    /*Styling the MTN container*/
+    .MTN{
+        background-color: rgb(241, 241, 233);
+        height: 200px;
+        padding: 30px;
+        margin: 20px;
+        border-radius: 12px;
+        
+    }
+    /*Styling the MTN links*/
+    .MTN a{
+        position: absolute;
+    right: 80px;
+    background-color: black;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    }
+    /* Changing the background color of the MTN links*/
+    .MTN a:hover{
+        background-color: rgb(211, 211, 66);
+        
+    }
+    /*styling the At section*/
+    .AT
+    {
+        background-color: rgb(250, 240, 240);
+        height: 200px;
+        padding: 30px;
+        margin: 20px;
+        border-radius: 12px;
+    }
+    /*Styling the links in the at section*/
+     .AT a{
+        position: absolute;
+        right: 80px;
+        background-color: black;
+        padding: 5px;
+        text-decoration: none;
+        color: white;
+        
+     }
+    /* Changing the background color of the AT links*/
+
+     .AT a:hover{
+        background-color: rgb(12, 12, 105);
+     }
+     /*Styling  the Telecel Section*/
+    .Telecel{
+        background-color: rgb(241, 241, 233);
+        height: 200px;
+        padding: 30px;
+        margin: 20px;
+        border-radius: 12px;
+    }
+/*Styling the links in the Telecel section*/
+    .Telecel a{
+        position: absolute;
+        right: 80px;
+        background-color: black;
+        padding: 5px;
+        text-decoration: none;
+        color: white;
+    }
+    /* Changing the background color of the Telecel links on hover*/
+    .Telecel a:hover{
+        background-color: rgb(190, 55, 55);
+    }
+

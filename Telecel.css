@@ -1,0 +1,136 @@
+/* Resetting margin and padding for the body and setting a background color */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+/* Styling the header with flex display and background color */
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(42, 60, 79);
+}
+
+/* Styling the header text */
+header h2 {
+    color: white;
+}
+
+/* Styling the navigation list */
+.nav-list {
+    margin: 20px;
+}
+
+/* Styling list items with inline display and margin */
+ul li {
+    display: inline;
+    margin-right: 5px;
+}
+
+/* Changing the text decoration and color of links on hover */
+li a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+/* Styling the links */
+li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+}
+
+/* Setting the size of images */
+img {
+    width: 400px;
+}
+
+/* Media query for resizing images on smaller screens */
+@media only screen and (max-width: 600px) {
+    img {
+        width: 200px; /* Resize image to smaller size */
+    }
+}
+
+/* Styling the image container */
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(117, 3, 3);
+    margin: auto;
+    margin-top: 40px;
+    width: 450px;
+    height: 310px;
+    border-radius: 12px;
+}
+
+/* Media query for resizing the image container on smaller screens */
+@media only screen and (max-width: 600px) {
+    .img {
+        width: 250px; /* Resize image container to smaller size */
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Styling the content container */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Removing outline and box-shadow on focus for select and input elements */
+select:focus, input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Styling the clear button */
+#clearButton {
+    position: relative;
+    background-color: #ec1515;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Changing the background color of the clear button on hover */
+#clearButton:hover {
+    background-color: #7c7b7b;
+}
+
+/* Styling the Buy Now button */
+#BuyNow {
+    position: relative;
+    background-color: #910707;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Styling the links inside the content container */
+.content a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Styling the Buy Now button */
+#BuyNow {
+    position: relative;
+    background-color: #580808;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Changing the background color of the Buy Now button on hover */
+#BuyNow:hover {
+    background-color: rgb(247, 10, 10);
+}
