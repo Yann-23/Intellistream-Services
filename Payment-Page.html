@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/PaymentStyle.css">
+    <title>Details to pay</title>
+</head>
+<body>
+    <header>
+        <h2>Payment page</h2>
+        <nav>
+            <ul>
+                <li> <a href="Homepage.html">Home</a></li>
+                <li> <a href="Data_home.html">Data Hub</a></li>
+           </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Payment details</h2>
+        <h2>NB:</h2>
+
+
+        <div class="content">
+        
+                <h3>0535141615 (KOFI BOATENG)</h3>
+                <P>NB: TO CONFIRM THE PURCHASE PLEASE MAKE THE PAYMENT OF THE AMOUNT
+                    CORRESPONDING ON  THE DATA SELECTED ON THE MOMO NUMBER AT THE TOP AND USE THE TRANSACTION_ID AS REFERENCE.</P>
+                    <h3>Thank you for trusting Intellistream Services</h3>
+        </div>
+        <div id="payment-info"></div>
+    </p id="transactionId"></p>
+    </section>
+
+
+
+<script>
+
+    // Payment-page.html
+    const gbValue = localStorage.getItem('gb');
+    const beneficiaryValue = localStorage.getItem('beneficiary');
+    const randomNumber = localStorage.getItem('randomNumber');
+
+    // Display the values on the page
+    document.getElementById('payment-info').innerHTML = `
+      <p>Transaction ID: #${randomNumber}</p>
+      <p>Amount of GB: ${gbValue}</p>
+      <p>Beneficiary Number: ${beneficiaryValue}</p>
+    `;
+
+     
+    
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Number Generator</title>
+    <script>
+        function generateRandomNumber() {
+            // Generate a random number between 1000 and 9999
+            let randomNumber = Math.floor(1000 + Math.random() * 9000);
+            // Get values entered by the user
+            let gbValue = document.getElementById('gbValue').value;
+            let beneficiaryValue = document.getElementById('beneficiaryValue').value;
+            // Construct the output string
+            let output = `#${randomNumber} - GB Value: ${gbValue}, Beneficiary Value: ${beneficiaryValue}`;
+            // Print the output
+            document.getElementById('output').innerText = output;
+        }
+    </script>
+</head>
+<body>
+    <label for="gbValue">GB Value:</label>
+    <input type="text" id="gbValue">
+    <br>
+    <label for="beneficiaryValue">Beneficiary Value:</label>
+    <input type="text" id="beneficiaryValue">
+    <br>
+    <button onclick="generateRandomNumber()">BuyNow</button>
+    <p id="output"></p>
+</body>
+</html>

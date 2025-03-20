@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/styleHomep.css">
+    <!-- filepath: /c:/Users/HP/OneDrive/Documents/My Web Sites/Intellistream ghana/Homepage.html -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <title>Homepage/Intellistream</title>
+</head>
+<body>
+    <header>
+        <span><img src="Images/Intellistrean-logo.png" alt=""></span>
+
+      <nav>
+        <!-- the icon menu hamburger is added to the nav-->
+        <div class="icon-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+      <!-- The code you provided is creating a navigation menu with dropdown functionality. Here's a
+      breakdown of what each part does: -->
+        <ul>
+            <li>Homepage</li>
+            <li class="dropdown">
+                <button class="dropbtn">Our Services</button>
+                <div class="dropdown-content">
+                    <a href="Data_home.html">Data Services</a>
+                    <a href="#">Voice Services</a>
+                    <a href="Streaming-S.html">Streaming Services</a>
+                    <a href="#">Other Services</a>
+                </div>
+          
+            <li>About us</li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <!-- The `<section>` element in the provided code is creating a section within the webpage. Inside
+    this section, there are heading elements `<h1>`, `<h2>`, and `<h4>` that provide information
+    about the services offered by Intellistream. Additionally, there are two buttons within a
+    `<div>` element with the class "buttons". -->
+    <section>
+        <h1>Intellistream Provider of Digital Services</h1>
+
+
+        <h2>Get Affordable Data,voice and Streaming Services</h2>
+
+        <h4>Intellistream provides the best services for you</h4> <br>
+
+
+        <div class="buttons">
+            <button class="btn1"> <a href="Data_home.html">Shop now</a></button> <br>
+  
+            <button class="btn2">  <a href="https://wa.me/2330206085770">Join us on Whatsapp</a>  </button>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>Copyright &copy; 2025 Intellistream
+            Powered by Intellistream
+        </p>
+    </footer>
+
+
+
+<!-- The script you provided is adding functionality to toggle the display of the navigation menu when a
+user clicks on a menu icon. Here's a breakdown of what the script is doing: -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuIcon = document.querySelector('.icon-menu i');
+        const navUl = document.querySelector('nav ul');
+
+        menuIcon.addEventListener('click', function() {
+            if (navUl.style.display === 'block') {
+                navUl.style.display = 'none';
+            } else {
+                navUl.style.display = 'block';
+                navUl.style.position = 'absolute';
+                navUl.style.top = '70px';
+                navUl.style.right = '0';
+                navUl.style.backgroundColor = '#333';
+                navUl.style.width = '95px';
+                navUl.style.height = '350px';
+                navUl.style.display = 'row';
+            }
+        });
+    });
+</script>
+
+
+    
+</body>
+</html>

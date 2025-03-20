@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/Telecel.css">
+    <title>Telecel Data hub</title>
+</head>
+<body>
+<!-- The code you provided is creating a header section for a webpage. Inside the header, there is an h2
+element with the text "Telecel-Data" which is likely a heading for that section. Following the
+heading, there is a navigation bar created using an unordered list (ul) with two list items (li).
+Each list item contains an anchor (a) element with a link to different pages - "Home" and "Data
+Hub". This navigation bar allows users to easily navigate between the homepage and the data hub page
+of the website. -->
+    <header>
+        <h2>Telecel-Data</h2>
+        <nav class="nav-list">
+            <ul>
+                <li> <a href="Homepage.html">Home</a></li>
+                <li> <a href="Data_home.html">Data Hub</a></li>
+           </ul>
+    </nav>
+         
+    </header>
+
+   <section>
+                  
+     <!-- The provided HTML code represents a section of a webpage related to a Telecel Data hub. Here's
+     a breakdown of what each element is doing: -->
+     <div class="img">
+         <img src="Images/telecel-ghana-iT.png" alt=""> 
+        
+     </div>
+<!--Content container for displaying customer price and package options-->
+    <div class="content">
+        <h4>Customer price</h4>
+        <h4>&#8373; 5- &#8373; 430</h4> 
+        <h4>PACKAGE</h4>
+<!--Dropdown select element for choosing data package options-->
+        <select id="select">
+            <option value="option1">Choose an option</option>
+            <option value="5GB (&#8373; 28)">5GB</option>
+            <option value="10GB (&#8373; 55)">10GB</option>
+            <option value="15GB (&#8373; 72)">15GB</option>
+            <option value="20GB (&#8373; 95)">20GB</option>
+            <option value="30GB (&#8373; 145)">30GB</option>
+            <option value="40GB (&#8373; 178)">40GB</option>
+            <option value="50GB (&#8373; 225)">50GB</option>
+            <option value="80GB (&#8373; 310)">50GB</option>
+            <option value="100GB (&#8373; 430)">100GB</option>
+          </select>
+          <button id="clearButton">Clear</button> <br>
+
+          <!--Label and input for  Entering beneficiary number-->
+            <label for="beneficiary">Beneficiary Number</label> <br>
+            <input type="text" id="fname" name="fname" placeholder="beneficiary number">
+            
+            <button id="BuyNow"> <a href="javascript:void(0)">Buy now</a></button>
+        
+    </div>
+
+</section>
+
+<script>
+    // Get the values from the select option and input field
+    const gbSelect = document.getElementById('select');
+        const beneficiaryInput = document.getElementById('fname');
+        const outputElement = document.getElementById('ouput');
+
+        // Add an event listener to the clear button
+        document.getElementById('clearButton').addEventListener('click', function() {
+            gbSelect.selectedIndex = -1;
+            
+        });
+
+        // Add an event listener to the BuyNow button
+        document.getElementById('BuyNow').addEventListener('click', function() {
+            const gbValue = gbSelect.value;
+            const beneficiaryValue = beneficiaryInput.value;
+            const randomNumber = Math.floor(1000 + Math.random() * 9000);
+
+            
+        // Generate the output string
+        const output = `#${randomNumber} - GB Value: ${gbValue}, Beneficiary Value: ${beneficiaryValue}`;
+
+
+
+            // Store the values in local storage
+            localStorage.setItem('gb', gbValue);
+            localStorage.setItem('beneficiary', beneficiaryValue);
+             localStorage.setItem('randomNumber', randomNumber);
+   
+
+            // Redirect to the Payment Page
+            window.location.href = 'Payment-Page.html';
+        });
+    
+</script>
+
+
+    
+</body>
+</html>
