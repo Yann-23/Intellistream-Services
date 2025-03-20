@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/StreamingPage.css">
+    <title>Intellistream-Streaming options</title>
+</head>
+<body>
+    <!--Header section containing the title and the navigation menu-->
+    <header>
+        
+        <h2>Streaming Hub</h2>
+        <nav>
+            <ul>
+                <!--Navigation links to Homepage and Streaming page-->
+                <li> <a href="Homepage.html">Home</a></li>
+                <li> <a href="Streaming-S.html">Streaming</a></li>
+
+           </ul>
+        </nav>
+    </header>
+    <!--Main section for displaying Streraming platform options-->
+    <section>
+        <h2>Streaming Platforms</h2>
+        <div class="streaming">
+            <!--Netflix streaming platform section-->
+            <div class="Netflix">
+                <!--Netflix logo-->
+                <img src="Images/Netflix.jpg" alt="">
+                <!--Netflix Details-->
+                <h4>Netflix</h4>
+                <p>Two options are available for Netflix account  <br>
+                Choose one below</p>
+                    <!-- dropdown menu for choosing the account type-->
+                  <h4>Options:</h4>
+                  <select id="select">
+                    <option value="option1">Choose an option </option>
+                    <option value="1 ComptePersonnel (&#8373; 50)">Personal Account</option>
+                    <option value="1 SharedAccount (&#8373; 80)">Shared Account</option>
+                  </select>
+               <!--Buyyon to proceed with the purchase-->
+                <button id="BuyNow"> <a href="javascript:void(0)">Buy now</a></button>
+
+
+              
+                    
+            </div>
+            <!--Amazon-->
+            <div class="Amazon">
+                <!--Amazon logo-->
+                <img src="Images/Amazon_prime.png" alt="">
+                <h4>Amazon</h4>
+                <p>Two options are available for Amazon account <br>
+                    Choose one below
+                </p>
+                    <!-- dropdown menu for choosing the account type-->
+            
+                  <h4>Options:</h4>
+                  <select id="select2">
+                    <option value="option1">Choose an option</option>
+                    <option value="1 ComptePersonnel (&#8373; 45)">Personal Account</option>
+                    <option value="1 SharedAccount (&#8373; 150)">Shared</option>
+                  </select>
+                <button id="BuyNow" onclick="window.location.href = 'Payment-Page-Streaming.html'"> <a href="javascript:void(0)">Buy now</a></button>
+            </div>
+                 <!--IPTV-->
+            <div class="IPTV">
+                <!--IPTV logo-->
+                <img src="Images/iptv.jpg" alt="">
+
+                <h4>IPTV</h4>
+                <p>One option is available for iptv account <br>
+                    Choose one below
+                </p>
+                  <h4>Options:</h4>
+                  <select id="select2">
+                    <option value="option1">Choose an option</option>
+                    <option value="1 ComptePersonnel (&#8373; 45)">Personal Account</option>
+                    <option value="1 SharedAccount (&#8373; 150)">Shared</option>
+                  </select>
+                <button id="BuyNow" onclick="window.location.href = 'Payment-Page-Streaming.html'"> <a href="javascript:void(0)">Buy now</a></button>
+            </div>
+        </div>
+    </section>
+
+
+
+<!-- The script you provided is handling the functionality for when the "Buy now" button is clicked for
+each streaming platform option. Here's what it does: -->
+
+    <script>
+        const selectElement = document.querySelector('#select');
+        const buyNowButton = document.querySelector('#BuyNow');
+
+        buyNowButton.addEventListener('click', function() {
+            const selectedOption = selectElement.value;
+            localStorage.setItem('selectedOption', selectedOption);
+            window.location.href = 'Payment-Page-Streaming.html';
+        });
+        </script>
+    <script>
+
+         const selectElement2 = document.querySelector('#select2');
+        const buyNowButton2 = document.querySelector('#BuyNow');
+
+        buyNowButton2.addEventListener('click', function() {
+            const selectedOption2 = selectElement2.value;
+            localStorage.setItem('selectedOption2', selectedOption2);
+            window.location.href = 'Payment-Page-Streaming.html';
+        });
+    </script>
+
+    
+</body>
+</html>

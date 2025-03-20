@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/Payment-Page-Streaming.css">
+    <title>Payment-Page Streaming</title>
+</head>
+<body>
+
+    <header>
+        <h2>Payment page</h2>
+        <nav>
+            <ul>
+                <li> <a href="Streaming-S.html">Back</a></li>
+                <li> <a href="Streaming-S.html">Streaming Hub</a></li>
+           </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Payment details</h2>
+
+        <div class="content">
+            <h4>Number for Payment</h4>
+                <h3>0535141615 (KOFI BOATENG)</h3>
+                <P>NB: TO CONFIRM THE PURCHASE PLEASE MAKE THE PAYMENT OF THE AMOUNT
+                    CORRESPONDING ON THE TYPE OF ACCOUNT SELECTED.</P>
+        </div>
+        <div id="payment-info"></div>
+    
+    </section>
+
+    <script>
+                // On the Payment-Page-Streaming, retrieve and display the stored information
+                document.addEventListener('DOMContentLoaded', function() {
+            const selectedOption = localStorage.getItem('selectedOption');
+            if (selectedOption) {
+                document.getElementById('payment-info').innerHTML = `
+                    <p>Selected Option: ${selectedOption}</p>
+                `;
+            }
+        });
+
+    </script>
+
+
+    
+</body>
+</html>

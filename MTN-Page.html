@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/MTN.css">
+    <title>Intellistream Data hub-MTN</title>
+</head>
+<body>
+   <!-- The code you provided represents the header section of an HTML document. Here's what each part
+   does: -->
+    <header>
+        <h2>MTN-Data</h2>
+        <nav class="nav-list">
+            <ul>
+                <li> <a href="Homepage.html">Home</a></li>
+                <li> <a href="Data_home.html">Data Hub</a></li>
+           </ul>
+    </nav>
+         
+    </header>
+
+    <!-- The `<section>` element in the provided code represents a section of content within the HTML
+    document. Here's a breakdown of what the content inside the `<section>` element does: -->
+    <section>
+        <div class="img">
+            <img src="Images/mtn.jpg" alt=""> 
+            
+        </div>
+        
+    <!--Content container for displaying customer price and Package options-->
+        <div class="content">
+            <h4>Customer price</h4>
+            <h4>&#8373; 6- &#8373; 427 </h4> 
+            <h4>PACKAGE</h4>
+      <!-- Dropdown menu for selecting a data package -->
+            <select id="select">
+                <option value="option1">Choose an option</option>
+                <option value="1GB (&#8373; 6)">1GB(6GHS)</option>
+                <option value="2GB (&#8373; 12)">2GB</option>
+                <option value="3GB (&#8373; 18)">3GB</option>
+                <option value="4GB (&#8373; 24)">4GB</option>
+                <option value="5GB (&#8373; 29)">5GB</option>
+                <option value="6GB (&#8373; 34)">6GB</option>
+                <option value="8GB (&#8373; 44)">8GB</option>
+                <option value="10GB (&#8373; 51)">10GB</option>
+                <option value="15GB (&#8373; 75)">15GB</option>
+                <option value="20GB (&#8373; 96)">20GB</option>
+                <option value="25GB (&#8373; 116)">25GB</option>
+                <option value="30GB (&#8373; 140)">30GB</option>
+                <option value="40GB (&#8373; 180)">40GB</option>
+                <option value="50GB (&#8373; 220)">50GB</option>
+                <option value="100GB (&#8373; 435)">100GB</option>
+              </select>
+              <!-- Button to clear the selected option -->
+              <button id="clearButton">Clear</button> <br>
+
+              <!--Label and input for beneficiary number-->
+                <label for="beneficiary">Beneficiary Number</label> <br>
+                <input type="text" id="fname" name="fname" placeholder="beneficiary number">
+                
+              <!-- Button to initiate the purchase process -->
+                <button id="BuyNow"> <a href="javascript:void(0)">Buy now</a></button>
+                <p id="output"></p>
+        </div>
+
+    </section>
+ 
+ <script>
+      // Get the values from the select option and input field
+    const gbSelect = document.getElementById('select');
+    const beneficiaryInput = document.getElementById('fname');
+    const outputElement = document.getElementById('output');
+
+    // Add an event listener to the clear button
+    document.getElementById('clearButton').addEventListener('click', function() {
+        gbSelect.selectedIndex = -1;
+        
+    });
+
+    // Add an event listener to the BuyNow button
+    document.getElementById('BuyNow').addEventListener('click', function() {
+        const gbValue = gbSelect.value;
+        const beneficiaryValue = beneficiaryInput.value;
+        const randomNumber = Math.floor(1000 + Math.random() * 9000);
+
+        // Generate the output string
+        const output = `#${randomNumber} - GB Value: ${gbValue}, Beneficiary Value: ${beneficiaryValue}`;
+
+          // Display the output
+        outputElement.innerText = output;
+        
+        // Store the values in local storage
+        localStorage.setItem('gb', gbValue);
+        localStorage.setItem('beneficiary', beneficiaryValue);
+        localStorage.setItem('randomNumber', randomNumber);
+
+        // Redirect to the Payment Page
+        window.location.href = 'Payment-Page.html';
+    
+   
+    })
+
+</script>
+
+</body>
+</html>
